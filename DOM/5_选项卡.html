@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #btn-box span{
+            display: inline-block;
+            height: 50px;
+            width: 100px;
+            background: #f00;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer; //小手
+        }
+        #con-box div{
+            height: 200px;
+            width: 400px;
+            background: #0f0;
+            display: none;
+        }
+        #con-box div.active{
+            display: block;
+        }
+        #btn-box span.btn-active{
+            background:deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="btn-box">
+            <span class="btn-active">111</span>
+            <span>222</span>
+            <span>333</span>
+        </div>
+        <div id="con-box">
+           <div class="active">aaa</div>
+           <div>bbb</div>
+           <div>ccc</div>
+        </div>
+    </div>
+    <script>
+        var oBtnBox=document.getElementById('btn-box');
+        //按钮
+        var aBtn=oBtnBox.getElementsByTagName('span');
+        var oConBox=document.getElementById('con-box');
+        //内容
+        var aCon=oConBox.getElementsByTagName('div');
+        for(var i=0;i<aBtn.length;i++){
+            aBtn[i].index=i;
+            aBtn[i].onclick=function(){
+               
+               for(var j=0;j<aBtn.length;j++){
+                   aBtn[j].className='';
+                   aCon[j].className='';
+               }
+               //this对当前对象的引用
+               this.className='btn-active';
+               var index=this.index;
+               aCon[index].className='active';
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -5,7 +5,71 @@
     <title>Document</title>
 </head>
 <body>
-    
-    
+    <div id="div1" >qudashdgasj</div>
+    <div id="div1">cfvghjkfcdfvghj</div>
+    <div id="div1" >cdfvghj</div>
+    <div id="div1">cdhj</div>
+    <ul>
+        <li class='aabb'>001</li>
+        <li>002</li>
+        <li class='aa'>003</li>
+        <li>004</li>
+    </ul>
+    <ul>
+        <li class='aa'>001</li>
+        <li>002</li>
+        <li class='aa'>003</li>
+        <li>004</li>
+    </ul>
+     <script>
+        //  var oDiv1=document.getElementById('div1');
+        //  console.log(oDiv1);
+
+        //类数组
+    //    var aDiv1 = document.getElementsByTagName('div');
+
+    //      for(var i=0; i<aDiv1.length; i++){
+    //      aDiv1[i].onclick = function(){
+    //      console.log(1111);
+    //      }
+    //      }
+    function getEleByClass(claName){
+        var result=[];
+        var aEle=document.getElementsByTagName('*');
+        for(var i=0;i<aEle.length;i++){
+            // if(aEle[i].className==claName){
+            //     result.push(aEle[i]);
+            // }
+            // "aa bb"=="aa"
+            // if(aEle[i].className.indexOf(claName)!=-1){
+            //     result.push(aEle[i]);
+            // }
+
+            "aa bb cc"=='aa'
+            "aabb"="aa";
+            var str=aEle[i].className;
+            var arr=str.split('');//['aa','bb','cc']
+            for(var j=0;j<arr.length;j++){
+                if(arr[j]=claName){
+                    result.push(aEle(i));
+                }
+            }
+        }
+        return result;
+    }
+    var aA=getEleByClass('aa');
+    for(var i=0;i<=aA.length;i++){
+        aA[i].style.background='red';
+    }
+
+
+    var oUl=document.getElementById('ul1');
+    var aLi=oUl.getElementsByClassName('aa');
+    for(var i=0;i<aLi.length;i++){
+        aLi.style.background='green';
+    }
+
+         
+     </script>
 </body>
 </html>
