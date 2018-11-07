@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        #small-img-box{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            float: left;
+        }
+        #drag{
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.4);
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        #big-img-box{
+            float: left;
+            width: 400px;
+            height: 400px;
+            background: url("2.jpg") 0 0 no-repeat;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="small-img-box">
+        <img src="1.jpg" alt="">
+        <div id="drag"></div>
+    </div>
+    <div id="big-img-box">
+
+    </div>
+    <script>
+        var oSmallBox=document.getElementsById('small-img-box');
+        var oDrag=document.getElementById('drag');
+        oSmallBox.onmouseover=function(){
+            oDrag.style.display='block';
+        }
+    </script>
+</body>
+</html>
