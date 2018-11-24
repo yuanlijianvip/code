@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+        }
+        div{
+            height: 50px;
+            width: 50px;
+            border:1px solid red;
+        }
+        .div1{
+            position: absolute;
+            left: 0px;
+            top:0px;
+        }
+        .div2{
+            border-left:transparent;
+            position: absolute;
+            top:0px;
+            left:50px;
+
+        }
+        .div3{
+            border-top:none;
+            position: absolute;
+            top:51px;
+            left:0px;
+        }
+        .div4{
+            border-top:none;
+            border-left:none;
+            position: absolute;
+            top:51px;
+            left:51px;
+        }
+        .div1:hover{
+            border:1px solid aqua;
+        }
+        .div2:hover+.div1{
+            border:1px solid aqua;
+
+        }
+        .div2:hover+.div1{
+            border-left-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="div1">
+
+    </div>
+    <div class="div2">
+
+    </div>
+    <div class="div3">
+
+    </div>
+    <div class="div4">
+
+    </div>
+
+</body>
+</html>

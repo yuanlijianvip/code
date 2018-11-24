@@ -41,9 +41,32 @@
     </div>
     <script>
         var oSmallBox=document.getElementsById('small-img-box');
+        var oBigBox=document.getElementsById('big-img-box');
         var oDrag=document.getElementById('drag');
         oSmallBox.onmouseover=function(){
             oDrag.style.display='block';
+            oDrag.style.display='block';
+        }
+        oSmallBox.onmousemove=function(e){
+            e=e||window.event;
+            var left=e.clientX-oDrag.offsetWidth/2;
+            var top=e.clientY-oDrag.offsetHeight/2;
+            if(left<=0){
+                left=0;
+            }
+            if(top<=0){
+                top=0;
+            }
+            var maxX=oSmallBox.offsetWidth-oDrag.offsetWidth;
+            var maxY=oSmallBox.offsetWidth-oDrag.offsetWidth;
+            if(left>=maxX){
+                left=maxX;
+            }
+            if(top>=maxY){
+                top=maxY;
+            }
+            oDrag.style.left=left+"px";
+            oDrag.style.top=top+"px";
         }
     </script>
 </body>
