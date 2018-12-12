@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #ul1{
+            width: 120px;
+            border:1px solid #999;
+            border-radius: 10px;
+            list-style: none;
+            display: none;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul1">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+        <li>666</li>
+    </ul>
+
+    <script>
+       var oUl1 = document.getElementById('ul1');
+        document.oncontextmenu = function (e) {
+            oUl1.style.display = 'block';
+            
+            
+            
+            //阻止默认行为
+            //标准浏览器下 阻止默认行为
+            e.preventDefault();
+            //ie浏览器下 阻止默认行为
+            e.returnValue=false;
+            //阻止默认行为
+            return false;
+        }
+    </script>
+</body>
+</html>

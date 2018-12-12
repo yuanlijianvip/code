@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="div1" class="a">
+            hskdkasgd
+    </div>
+    <ul>
+        <li>111</li>
+        <li class="a b">222</li>
+        <li>111</li>
+        <li class="a">222</li>
+
+    </ul>
+    <script>
+       function getElementsByClass(clsName){
+           var result=[];
+           var allELe=document.getElementsByTagName("*");
+           for(var i=0;i<allELe.length;i++){
+               var arr=allELe[i].className.split(" ");
+               for(var k=0;k<arr.length;k++){
+                   if(arr[k]==clsName){
+                       result.push(allELe[i]);
+                   }
+               }
+           }
+           return result;
+       }
+
+       var a2=getElementsByClass('a');
+       for(var j=0;j<a2.length;j++){
+           a2[j].style.background="pink";
+       }
+    
+    </script>
+</body>
+</html>

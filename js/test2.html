@@ -290,6 +290,56 @@
                             // }
                             // var date=new Date();
                             // console.log(dayOfYear(date));
+
+
+
+                        //    function Min(x,y){
+                        //         return x>y?y:x;
+                        //     }
+                        // var x,y;
+                        // x=prompt("x=","0");
+                        // y=prompt("y=","0");
+
+                        // alert("Min("+x+","+y+")="+Min(x,y));
+
+                        // function fn(x){
+                        //     return x%3==0&&x%5==0&&x%7==0;
+                        // }
+
+                        // var n,nb=0;
+                        // for(n=1;n<1000;n++){
+                        //     if(fn(n)){
+                        //         if(nb%6>0) document.write(",");
+                        //         nb++;
+                        //         document.write(n);
+                        //         if(nb%6==0)
+                        //             document.write("<br/>");
+                                
+                        //     }
+                        // }
+
+                        function fn(n){
+                            if(n<1){
+                                return false;
+                            }
+                            var i;
+                            for(i=2;i<n;i++){
+                                if(n%i==0){
+                                    return false;
+                                }
+
+                            }
+                            return true;
+                        }
+                       var n,nb=0;
+                       for(n=100;n<=1000;n++){
+                           if(fn(n)){
+                               if(nb%6>0) document.write(",");
+                               nb++;
+                               document.write(n);
+                               if(nb%6==0) document.write("<br/>")
+                           }
+                       }
                     
     </script>
 </body>
